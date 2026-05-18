@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Mert Elitok</h1>
 <h3 align="center">Backend Developer Intern | Building APIs with C#/.NET | Python | Data & AI</h3>
 
-- 🌱 I’m currently learning **ASP.NET Core, Entity Framework Core**
+- 🌱 I’m currently learning **ASP.NET Core Web API**
 
 - 💬 Ask me about **C#, .NET, REST APIs, SQL, and Python**
 
