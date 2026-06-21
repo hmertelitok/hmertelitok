@@ -29,6 +29,16 @@ I build data-driven software solutions by combining
 
 ## Featured Projects
 
+### [Banking Customer Analytics & Risk Dashboard](https://github.com/hmertelitok/banking-customer-analytics-dashboard)
+
+Power BI dashboard project focused on banking customer analytics, customer segmentation, campaign performance and credit default risk analysis.
+
+In this project, the American Bank Dataset was transformed, localized into Turkish and prepared for Power BI reporting. DAX measures were used to calculate key KPIs, credit default rate, risk segments and scenario-based risk analysis.
+
+Tools & Technologies: Power BI, DAX, CSV, Data Analytics, Business Intelligence
+
+Repository: banking-customer-analytics-dashboard
+
 ### [Karar Ağacı Regresyonu ile Yoksulluk Analizi](https://github.com/hmertelitok/Karar_Agaci_Yoksulluk_Analizi)
 
 A machine learning project analyzing poverty using inflation, unemployment and income inequality indicators from selected countries.
