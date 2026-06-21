@@ -22,7 +22,8 @@ I build data-driven software solutions by combining
 * Developing backend applications with **C# and ASP.NET Core Web API**
 * Designing relational database structures with **PostgreSQL and SQL Server**
 * Building data analysis and machine learning projects with **Python**
-* Working on **ETL processes, data modeling and Power BI reporting**
+* Creating business intelligence reports with **Power BI and DAX**
+* Working on **ETL processes, data modeling and reporting workflows**
 * Interested in **data engineering, backend development and AI-driven solutions**
 
 ---
@@ -31,19 +32,19 @@ I build data-driven software solutions by combining
 
 ### [Banking Customer Analytics & Risk Dashboard](https://github.com/hmertelitok/banking-customer-analytics-dashboard)
 
-Power BI dashboard project focused on banking customer analytics, customer segmentation, campaign performance and credit default risk analysis.
+A Power BI dashboard project focused on **banking customer analytics, customer segmentation, campaign performance and credit default risk analysis**.
 
-In this project, the American Bank Dataset was transformed, localized into Turkish and prepared for Power BI reporting. DAX measures were used to calculate key KPIs, credit default rate, risk segments and scenario-based risk analysis.
+In this project, the **American Bank Dataset** was transformed, localized into Turkish and prepared for Power BI reporting. DAX measures were used to calculate key KPIs, credit default rate, risk segments and scenario-based risk analysis.
 
-Tools & Technologies: Power BI, DAX, CSV, Data Analytics, Business Intelligence
+`Power BI` `DAX` `Business Intelligence` `Data Analytics` `Dashboard` `Risk Analysis` `Customer Segmentation`
 
-Repository: banking-customer-analytics-dashboard
+---
 
 ### [Karar Ağacı Regresyonu ile Yoksulluk Analizi](https://github.com/hmertelitok/Karar_Agaci_Yoksulluk_Analizi)
 
-A machine learning project analyzing poverty using inflation, unemployment and income inequality indicators from selected countries.
+A machine learning project analyzing poverty indicators using inflation, unemployment and income inequality data from selected countries.
 
-`Python` `Pandas` `Scikit-learn` `Matplotlib` `Seaborn`
+`Python` `Pandas` `Scikit-learn` `Matplotlib` `Seaborn` `Decision Tree Regression`
 
 ---
 
@@ -51,15 +52,15 @@ A machine learning project analyzing poverty using inflation, unemployment and i
 
 A network analysis project examining relationships between students based on their framework and library usage.
 
-`Python` `NetworkX` `Pandas` `Matplotlib` `Jupyter Notebook`
+`Python` `NetworkX` `Pandas` `Matplotlib` `Jupyter Notebook` `Network Analysis`
 
 ---
 
 ### [Backend Development Studies](https://github.com/hmertelitok/internship-studies)
 
-Backend development studies covering object-oriented programming, RESTful services and ASP.NET Core Web API.
+Backend development studies covering object-oriented programming, RESTful services and ASP.NET Core Web API fundamentals.
 
-`C#` `.NET` `ASP.NET Core` `REST API` `SQL`
+`C#` `.NET` `ASP.NET Core` `REST API` `SQL` `Backend Development`
 
 ---
 
@@ -94,6 +95,7 @@ Backend development studies covering object-oriented programming, RESTful servic
   <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
   <img src="https://img.shields.io/badge/SQL-336791?style=flat-square&logo=databricks&logoColor=white" alt="SQL">
   <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI">
+  <img src="https://img.shields.io/badge/DAX-204ECF?style=flat-square" alt="DAX">
 </p>
 
 ### Tools
@@ -113,7 +115,7 @@ Backend development studies covering object-oriented programming, RESTful servic
 * Building backend services with **ASP.NET Core**
 * Improving relational database design and SQL skills
 * Developing reproducible ETL and data analysis workflows
-* Creating business intelligence solutions with **Power BI**
+* Creating business intelligence reports with **Power BI**
 * Applying machine learning techniques to real-world datasets
 
 ---
