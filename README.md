@@ -2,7 +2,7 @@
   <a href="https://github.com/hmertelitok">
     <img
       alt="Mert Elitok Hero Banner"
-      src="./assets/github-banner.svg?v=4"
+      src="./assets/github-banner.svg?v=5"
       width="100%">
   </a>
 </div>
@@ -34,7 +34,7 @@
 
 ### Let's Connect
 
-<a href="https://www.linkedin.com/in/hmertelitok/" target="_blank">
+<a href="https://www.linkedin.com/in/hmertelitok/">
   Connect with me on LinkedIn
 </a>
 
