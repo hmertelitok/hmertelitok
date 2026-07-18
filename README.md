@@ -1,8 +1,12 @@
 <div align="center">
   <a href="https://github.com/hmertelitok">
-    <img alt="Mert Elitok Hero Banner" src="./assets/github-banner.svg" width="100%">
+    <img
+      alt="Mert Elitok Hero Banner"
+      src="./assets/github-banner.svg?v=4"
+      width="100%">
   </a>
 </div>
+
 <br>
 
 ## About Me
