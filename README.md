@@ -1,21 +1,9 @@
 <div align="center">
-
-# Hi 👋, I'm Mert Elitok
-
-### Data Solutions | Jr. Software Developer
-
-I build data-driven software solutions by combining
-**backend development, relational databases, data analysis and business intelligence.**
-
-<br>
-
-<a href="https://www.linkedin.com/in/hmertelitok/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-
+  <a href="https://github.com/hmertelitok">
+    <img alt="Mert Elitok Hero Banner" src="./assets/github-banner.svg" width="100%">
+  </a>
 </div>
-
----
+<br>
 
 ## About Me
 
