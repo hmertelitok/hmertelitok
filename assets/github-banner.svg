@@ -1,0 +1,316 @@
+<svg width="1180" height="610" viewBox="0 0 1180 610" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!-- Fonts Setup -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+            text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+            .skill-text { font-size: 13px; font-weight: 500; }
+        </style>
+
+        <!-- Background Grid -->
+        <pattern id="grid-dark" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+        </pattern>
+
+        <!-- Gradients -->
+        <linearGradient id="accent-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7C3AED">
+                <animate attributeName="stop-color" values="#7C3AED;#22D3EE;#7C3AED" dur="6s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-color="#10B981">
+                <animate attributeName="stop-color" values="#10B981;#7C3AED;#10B981" dur="6s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#06B6D4" />
+            <stop offset="100%" stop-color="#A855F7" />
+        </linearGradient>
+
+        <!-- Filters -->
+        <filter id="blur-heavy">
+            <feGaussianBlur stdDeviation="80" />
+        </filter>
+        <filter id="glow-dark">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        
+        <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.04 0" />
+        </filter>
+
+        <!-- Clip Paths -->
+        <clipPath id="left-panel-clip">
+            <rect x="40" y="40" width="420" height="530" rx="24" />
+        </clipPath>
+
+        <clipPath id="profile-clip">
+            <circle cx="250" cy="305" r="120" />
+        </clipPath>
+
+        <clipPath id="typing-clip">
+            <rect x="520" y="150" width="0" height="40">
+                <animate attributeName="width" values="0; 250; 250; 0; 0" keyTimes="0; 0.2; 0.8; 0.9; 1" dur="4s" repeatCount="indefinite" />
+            </rect>
+        </clipPath>
+    </defs>
+
+    <!-- Base Background -->
+    <rect width="1180" height="610" fill="#030712" rx="24"/>
+    <rect width="1180" height="610" fill="url(#grid-dark)" rx="24" />
+
+    <!-- Floating Orbs -->
+    <circle cx="200" cy="150" r="200" fill="#7C3AED" filter="url(#blur-heavy)" opacity="0.15">
+        <animateMotion path="M0 0 C 150 100, 250 -100, 300 150 C 100 250, -100 100, 0 0" dur="20s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="900" cy="450" r="250" fill="#22D3EE" filter="url(#blur-heavy)" opacity="0.15">
+        <animateMotion path="M0 0 C -150 -100, -250 100, -300 -150 C -100 -250, 100 -100, 0 0" dur="25s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="600" cy="300" r="150" fill="#10B981" filter="url(#blur-heavy)" opacity="0.1">
+        <animate attributeName="r" values="150; 200; 150" dur="10s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Noise Texture Overlay -->
+    <rect width="1180" height="610" filter="url(#noise)" pointer-events="none" rx="24" />
+
+    <!-- Floating Particles -->
+    <g fill="#22D3EE" opacity="0.6" filter="url(#glow-dark)">
+        <circle cx="100" cy="500" r="1.5"><animateMotion path="M0,0 Q50,-50 100,0 T200,0" dur="15s" repeatCount="indefinite"/></circle>
+        <circle cx="1050" cy="100" r="1.5"><animateMotion path="M0,0 Q-50,50 -100,0 T-200,0" dur="12s" repeatCount="indefinite"/></circle>
+        <circle cx="500" cy="550" r="2"><animateMotion path="M0,0 Q30,-80 0,-150" dur="10s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- ==================== LEFT PANEL (PROFILE PICTURE) ==================== -->
+    <g>
+        <!-- Glass Base -->
+        <rect x="40" y="40" width="420" height="530" fill="#0F172A" fill-opacity="0.6" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" rx="24" />
+        
+        <g clip-path="url(#left-panel-clip)">
+            
+            <!-- Animated Profile Area -->
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0; 0 -8; 0 0" dur="6s" repeatCount="indefinite" />
+                
+                <!-- Outer Dashed Ring -->
+                <circle cx="250" cy="305" r="145" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="10 20" opacity="0.4">
+                    <animateTransform attributeName="transform" type="rotate" from="360 250 305" to="0 250 305" dur="30s" repeatCount="indefinite" />
+                </circle>
+
+                <!-- Middle Glowing Ring -->
+                <circle cx="250" cy="305" r="130" fill="none" stroke="url(#accent-grad-dark)" stroke-width="3" filter="url(#glow-dark)" opacity="0.8">
+                    <animateTransform attributeName="transform" type="rotate" from="0 250 305" to="360 250 305" dur="15s" repeatCount="indefinite" />
+                </circle>
+
+                <!-- Inner Solid Border -->
+                <circle cx="250" cy="305" r="122" fill="#030712" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+
+                <!-- The Profile Picture -->
+                <image href="https://github.com/hmertelitok.png" x="130" y="185" width="240" height="240" clip-path="url(#profile-clip)">
+                    <animate attributeName="opacity" values="0;1" dur="2s" fill="freeze" />
+                </image>
+
+                <!-- Small Orbiting Particle -->
+                <circle cx="380" cy="305" r="4" fill="#10B981" filter="url(#glow-dark)">
+                    <animateTransform attributeName="transform" type="rotate" from="0 250 305" to="360 250 305" dur="8s" repeatCount="indefinite" />
+                </circle>
+            </g>
+
+            <!-- Scanline Effect -->
+            <rect x="40" y="40" width="420" height="2" fill="#22D3EE" opacity="0.3" filter="url(#glow-dark)">
+                <animate attributeName="y" values="40; 570; 40" dur="4s" repeatCount="indefinite" />
+            </rect>
+        </g>
+    </g>
+
+    <!-- ==================== RIGHT PANEL (TERMINAL) ==================== -->
+    <g>
+        <!-- Glass Base -->
+        <rect x="490" y="40" width="650" height="530" fill="#0F172A" fill-opacity="0.6" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" rx="24" />
+        
+        <!-- Mac Window Controls -->
+        <g transform="translate(520, 65)">
+            <circle cx="0" cy="0" r="6" fill="#EF4444" />
+            <circle cx="20" cy="0" r="6" fill="#F59E0B" />
+            <circle cx="40" cy="0" r="6" fill="#10B981" />
+        </g>
+
+        <!-- Greeting -->
+        <text x="520" y="125" font-size="34" font-weight="700" fill="#F8FAFC">Hi 👋, I'm Mert Elitok</text>
+
+        <!-- Typing Animation Group (5 Items = 20s Cycle) -->
+        <g clip-path="url(#typing-clip)">
+            <!-- Title 1 -->
+            <g opacity="1">
+                <animate attributeName="opacity" values="1;0;0;0;0;1" keyTimes="0; 0.2; 0.4; 0.6; 0.8; 1" calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+                <text x="520" y="175" font-size="22" font-weight="600" fill="url(#accent-grad-dark)">Data Solutions</text>
+            </g>
+            <!-- Title 2 -->
+            <g opacity="0">
+                <animate attributeName="opacity" values="0;1;0;0;0;0" keyTimes="0; 0.2; 0.4; 0.6; 0.8; 1" calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+                <text x="520" y="175" font-size="22" font-weight="600" fill="url(#accent-grad-dark)">Jr. Software Developer</text>
+            </g>
+            <!-- Title 3 -->
+            <g opacity="0">
+                <animate attributeName="opacity" values="0;0;1;0;0;0" keyTimes="0; 0.2; 0.4; 0.6; 0.8; 1" calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+                <text x="520" y="175" font-size="22" font-weight="600" fill="url(#accent-grad-dark)">Backend &amp; Databases</text>
+            </g>
+            <!-- Title 4 -->
+            <g opacity="0">
+                <animate attributeName="opacity" values="0;0;0;1;0;0" keyTimes="0; 0.2; 0.4; 0.6; 0.8; 1" calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+                <text x="520" y="175" font-size="22" font-weight="600" fill="url(#accent-grad-dark)">Data Analysis &amp; BI</text>
+            </g>
+            <!-- Title 5 (AI) -->
+            <g opacity="0">
+                <animate attributeName="opacity" values="0;0;0;0;1;0" keyTimes="0; 0.2; 0.4; 0.6; 0.8; 1" calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+                <text x="520" y="175" font-size="22" font-weight="600" fill="url(#accent-grad-dark)">AI-Driven Solutions</text>
+            </g>
+        </g>
+        
+        <!-- Moving Typing Cursor -->
+        <rect x="520" y="153" width="10" height="26" fill="#22D3EE" filter="url(#glow-dark)">
+            <animate attributeName="x" values="520; 770; 770; 520; 520" keyTimes="0; 0.2; 0.8; 0.9; 1" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="1;0;1;0;1;0;1;0;1;0" dur="1s" repeatCount="indefinite" />
+        </rect>
+
+        <!-- Sequential Reveal Info Section -->
+        <g font-size="15">
+            <!-- About Me -->
+            <g opacity="0" transform="translate(0, 10)">
+                <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="1s" fill="freeze" />
+                <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.8s" begin="1s" fill="freeze" />
+                <path d="M528 221c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#94A3B8"/>
+                <text x="550" y="235" fill="#94A3B8" font-weight="600">About Me</text>
+                <text x="660" y="235" fill="#F8FAFC">AI | Data Solutions | Backend Developer</text>
+            </g>
+            
+            <!-- Focus -->
+            <g opacity="0" transform="translate(0, 10)">
+                <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="1.3s" fill="freeze" />
+                <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.8s" begin="1.3s" fill="freeze" />
+                <path d="M528 253l-11 6 11 6 9-4.91v4.91h2v-8l-11-6zm-7 10.18v4l7 3.82 7-3.82v-4l-7 3.82-7-3.82z" fill="#94A3B8"/>
+                <text x="550" y="270" fill="#94A3B8" font-weight="600">Current Focus</text>
+                <text x="660" y="270" fill="#F8FAFC">ASP.NET Core Web API &amp; Data Engineering</text>
+            </g>
+
+            <!-- Location -->
+            <g opacity="0" transform="translate(0, 10)">
+                <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="1.6s" fill="freeze" />
+                <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.8s" begin="1.6s" fill="freeze" />
+                <path d="M528 288a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm0-14a6 6 0 100 12 6 6 0 000-12zm0 10a4 4 0 110-8 4 4 0 010 8zm0-6a2 2 0 100 4 2 2 0 000-4z" fill="#94A3B8"/>
+                <text x="550" y="305" fill="#94A3B8" font-weight="600">Location</text>
+                <text x="660" y="305" fill="#F8FAFC">Türkiye</text>
+            </g>
+            
+            <!-- LinkedIn -->
+            <g opacity="0" transform="translate(0, 10)">
+                <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="1.9s" fill="freeze" />
+                <animateTransform attributeName="transform" type="translate" from="0 10" to="0 0" dur="0.8s" begin="1.9s" fill="freeze" />
+                <g transform="translate(521, 326) scale(0.8)">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#94A3B8"/>
+                </g>
+                <text x="550" y="340" fill="#94A3B8" font-weight="600">LinkedIn</text>
+                <a href="https://www.linkedin.com/in/hmertelitok/" target="_blank">
+                    <text x="660" y="340" fill="#22D3EE">linkedin.com/in/hmertelitok</text>
+                </a>
+            </g>
+        </g>
+
+        <!-- Skills Section (Glowing Pills from README) -->
+        <g transform="translate(0, 20)">
+            <!-- C# -->
+            <g cursor="pointer">
+                <rect x="520" y="380" width="55" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5">
+                    <animate attributeName="stroke" values="#334155; #512BD4; #334155" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                    <animate attributeName="stroke-width" values="1.5; 2; 1.5" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                </rect>
+                <text x="547.5" y="401" text-anchor="middle" class="skill-text" fill="#E2E8F0">C#</text>
+            </g>
+
+            <!-- .NET -->
+            <g cursor="pointer">
+                <rect x="585" y="380" width="70" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5">
+                    <animate attributeName="stroke" values="#334155; #512BD4; #334155" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                </rect>
+                <text x="620" y="401" text-anchor="middle" class="skill-text" fill="#E2E8F0">.NET</text>
+            </g>
+
+            <!-- PostgreSQL -->
+            <g cursor="pointer">
+                <rect x="665" y="380" width="110" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5">
+                    <animate attributeName="stroke" values="#334155; #4169E1; #334155" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                </rect>
+                <text x="720" y="401" text-anchor="middle" class="skill-text" fill="#E2E8F0">PostgreSQL</text>
+            </g>
+
+            <!-- SQL Server -->
+            <g cursor="pointer">
+                <rect x="785" y="380" width="110" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5">
+                    <animate attributeName="stroke" values="#334155; #CC2927; #334155" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                </rect>
+                <text x="840" y="401" text-anchor="middle" class="skill-text" fill="#E2E8F0">SQL Server</text>
+            </g>
+            
+            <!-- Python -->
+            <g cursor="pointer">
+                <rect x="520" y="425" width="85" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5">
+                    <animate attributeName="stroke" values="#334155; #3776AB; #334155" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                </rect>
+                <text x="562.5" y="446" text-anchor="middle" class="skill-text" fill="#E2E8F0">Python</text>
+            </g>
+
+            <!-- Pandas -->
+            <g cursor="pointer">
+                <rect x="615" y="425" width="85" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5">
+                    <animate attributeName="stroke" values="#334155; #150458; #334155" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                </rect>
+                <text x="657.5" y="446" text-anchor="middle" class="skill-text" fill="#E2E8F0">Pandas</text>
+            </g>
+
+            <!-- Power BI -->
+            <g cursor="pointer">
+                <rect x="710" y="425" width="100" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5">
+                    <animate attributeName="stroke" values="#334155; #F2C811; #334155" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                </rect>
+                <text x="760" y="446" text-anchor="middle" class="skill-text" fill="#E2E8F0">Power BI</text>
+            </g>
+
+            <!-- Scikit-learn -->
+            <g cursor="pointer">
+                <rect x="820" y="425" width="115" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5">
+                    <animate attributeName="stroke" values="#334155; #F7931E; #334155" dur="1.5s" begin="mouseover" repeatCount="indefinite" />
+                </rect>
+                <text x="877.5" y="446" text-anchor="middle" class="skill-text" fill="#E2E8F0">Scikit-learn</text>
+            </g>
+        </g>
+
+        <!-- Social Icons / Bottom Border -->
+        <line x1="520" y1="500" x2="1100" y2="500" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        
+        <g transform="translate(520, 520)">
+            <!-- GitHub -->
+            <g cursor="pointer">
+                <a href="https://github.com/hmertelitok" target="_blank">
+                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill="#94A3B8">
+                        <animate attributeName="fill" values="#94A3B8; #F8FAFC; #94A3B8" dur="1s" begin="mouseover" repeatCount="indefinite" />
+                    </path>
+                </a>
+            </g>
+            <!-- LinkedIn -->
+            <g cursor="pointer" transform="translate(40, 0)">
+                <a href="https://www.linkedin.com/in/hmertelitok/" target="_blank">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#94A3B8">
+                        <animate attributeName="fill" values="#94A3B8; #0A66C2; #94A3B8" dur="1s" begin="mouseover" repeatCount="indefinite" />
+                    </path>
+                </a>
+            </g>
+        </g>
+    </g>
+
+    <!-- Border Shimmer overlay for entire canvas -->
+    <rect width="1178" height="608" x="1" y="1" fill="none" stroke="url(#accent-grad-dark)" stroke-width="1.5" rx="24" opacity="0.3" pointer-events="none" />
+</svg>
