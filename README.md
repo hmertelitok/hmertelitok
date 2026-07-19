@@ -29,6 +29,25 @@
 * Applying machine learning techniques to real-world datasets
 
 ---
+# 🚀 Featured Project
+
+## [NASDAQ Financial RAG Assistant | AI-Powered SEC Filing Analysis](https://github.com/hmertelitok/nasdaq-financial-rag)
+
+An AI-powered financial research assistant that analyzes SEC 10-K filings and generates source-grounded answers using Retrieval-Augmented Generation.
+
+**Key Features**
+
+- SEC 10-K filing analysis for selected NASDAQ companies
+- Retrieval-Augmented Generation with source citations
+- Semantic search using PostgreSQL and pgvector
+- Python-based AI service with FastAPI
+- ASP.NET Core Web API integration
+- Local model execution with Microsoft Foundry Local
+- Interactive financial research interface
+
+**Tech Stack:** `C#` · `ASP.NET Core` · `Python` · `FastAPI` · `PostgreSQL` · `pgvector` · `RAG` · `Microsoft Foundry Local`
+
+[View Repository →](https://github.com/hmertelitok/nasdaq-financial-rag)
 
 <div align="center">
 
